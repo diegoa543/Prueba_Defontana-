@@ -43,7 +43,7 @@ class Program
 
         //¿Cómo obtendrías cuál es el producto que más se vende en cada local?
         var ventas = resultados.GroupBy(v => new { v.Local.IdLocal, v.Producto.IdProducto }).Select(r => new { Local = r.First().Local, Producto = r.First().Producto, CantidadTotal = r.Sum(s => s.Detalle.Cantidad) });
-        var topVendido = ventas.GroupBy(v => new { v.Local.IdLocal}).Select(r => r.OrderByDescending(o => o.CantidadTotal)).First();
+        var topVendido = ventas.GroupBy(v => new { v.Local.IdLocal}).Select(r => r.OrderByDescending(o => o.CantidadTotal).First());
         foreach(var v in topVendido)
         {
             Console.WriteLine($"El producto más vendido en el local {v.Local.Nombre} es {v.Producto.Nombre} con una cantidad total de {v.CantidadTotal} vendidos.");
@@ -57,12 +57,14 @@ class Program
     {
         using (var context = new PruebaContext())
         {
+            var ultimaFecha = context.Venta.Max(v => v.Fecha);
+            var fechaInicio = ultimaFecha.AddDays(-30);
             var consulta = (from venta in context.Venta
                             join ventaDetalle in context.VentaDetalles on venta.IdVenta equals ventaDetalle.IdVentaDetalle
                             join producto in context.Productos on ventaDetalle.IdProducto equals producto.IdProducto
                             join marca in context.Marcas on producto.IdMarca equals marca.IdMarca
                             join local in context.Locals on venta.IdLocal equals local.IdLocal
-                            where venta.Fecha > DateTime.Now.AddDays(-30)
+                            where venta.Fecha >= fechaInicio && venta.Fecha <= ultimaFecha
                             select new ResultadoConsulta
                             {
                                 Local = local,
