@@ -1,0 +1,15 @@
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\bin\Release\net6.0\Prueba_Defontana.exe
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\bin\Release\net6.0\Prueba_Defontana.deps.json
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\bin\Release\net6.0\Prueba_Defontana.runtimeconfig.json
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\bin\Release\net6.0\Prueba_Defontana.dll
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\bin\Release\net6.0\Prueba_Defontana.pdb
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\Prueba_Defontana.csproj.AssemblyReference.cache
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\Prueba_Defontana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\Prueba_Defontana.AssemblyInfoInputs.cache
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\Prueba_Defontana.AssemblyInfo.cs
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\Prueba_Defontana.csproj.CoreCompileInputs.cache
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\Prueba_Defontana.dll
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\refint\Prueba_Defontana.dll
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\Prueba_Defontana.pdb
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\Prueba_Defontana.genruntimeconfig.cache
+C:\Users\Diego\Documents\Prueba defontana\Prueba_consola\Prueba_Defontana\obj\Release\net6.0\ref\Prueba_Defontana.dll
