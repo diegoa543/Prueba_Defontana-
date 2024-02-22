@@ -64,6 +64,7 @@ class Program
         {
             Console.WriteLine($"Local: {r.Local}, Producto: {r.Producto}, Cantidad Total: {r.CantidadTotal}");
         }
+
         Console.ReadLine();
 
     }
