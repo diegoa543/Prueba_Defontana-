@@ -46,13 +46,6 @@ class Program
         Console.WriteLine($"La marca con mayor ganancias es {nombreMarca} con un margen de {gananacias}.");
 
         //¿Cómo obtendrías cuál es el producto que más se vende en cada local?
-        //var ventas = resultados.GroupBy(v => new { v.Local.IdLocal, v.Producto.IdProducto }).Select(r => new { Local = r.First().Local, Producto = r.First().Producto, CantidadTotal = r.Sum(s => s.Detalle.Cantidad) });
-        //var topVendido = ventas.GroupBy(v => new { v.Local.IdLocal}).Select(r => r.OrderByDescending(o => o.CantidadTotal).First());
-        //foreach(var v in topVendido)
-        //{
-        //    Console.WriteLine($"El producto más vendido en el local {v.Local.Nombre} es {v.Producto.Nombre} con una cantidad total de {v.CantidadTotal} vendidos.");
-        //}
-        //Console.ReadLine();
 
         var ventas = from r in resultados
                      group r by new { r.Local.IdLocal, r.Producto.IdProducto } into g
@@ -62,9 +55,10 @@ class Program
                          group v by v.IdLocal into g
                          select g.OrderByDescending(x => x.CantidadTotal).First()).ToList();
 
-        var resultado = from tv in topVentas
-                        join r in resultados on new { tv.IdLocal, tv.IdProducto } equals new { r.Local.IdLocal, r.Producto.IdProducto }
-                        select new { Local = r.Local.Nombre, Producto = r.Producto.Nombre, CantidadTotal = tv.CantidadTotal };
+        var resultado = (from tv in topVentas
+                         join r in resultados on new { tv.IdLocal, tv.IdProducto } equals new { r.Local.IdLocal, r.Producto.IdProducto }
+                         select new { Local = r.Local.Nombre, Producto = r.Producto.Nombre, CantidadTotal = tv.CantidadTotal }).OrderBy(r => r.Local);
+
 
         foreach (var r in resultado)
         {
